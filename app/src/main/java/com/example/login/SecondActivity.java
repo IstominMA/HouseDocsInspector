@@ -71,8 +71,9 @@ public class SecondActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera)   {
 
+
         } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(SecondActivity.this, SettingsActivity.class);
+            Intent intent = new Intent(SecondActivity.this, Nastroiki2Activity.class);
             startActivity(intent);
 
         }
