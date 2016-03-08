@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Настройки уведомлений"
+        android:background="#F2EDE8"
         android:id="@+id/button3"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -20,17 +21,22 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Настройки аккаунта"
+        android:background="#F2EDE8"
         android:id="@+id/button4"
+        android:layout_marginTop="73dp"
         android:layout_below="@+id/button3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp" />
+        android:layout_alignStart="@+id/button3"
+        android:layout_alignEnd="@+id/button3" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="О программе"
+        android:background="#F2EDE8"
         android:id="@+id/button5"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/button4"
+        android:layout_alignStart="@+id/button4"
+        android:layout_marginTop="91dp"
+        android:layout_alignEnd="@+id/button4" />
 </RelativeLayout>

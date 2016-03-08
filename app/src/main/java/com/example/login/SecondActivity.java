@@ -56,7 +56,7 @@ public class SecondActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_Nastr) {
             return true;
         }
 
@@ -72,8 +72,9 @@ public class SecondActivity extends AppCompatActivity
         if (id == R.id.nav_camera)   {
 
 
+
         } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(SecondActivity.this, Nastroiki2Activity.class);
+            Intent intent = new Intent(SecondActivity.this, NastrActivity.class);
             startActivity(intent);
 
         }

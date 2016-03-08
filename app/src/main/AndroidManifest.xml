@@ -22,10 +22,12 @@
             android:name=".SecondActivity"
             android:label="@string/title_activity_second"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".NastrActivity" />
         <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings" />
-        <activity android:name=".NastrActivity"></activity>
+            android:name=".NastrYvedActivity"
+            android:label="@string/title_activity_nastr_yved"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Info2Activity"></activity>
     </application>
 
 </manifest>

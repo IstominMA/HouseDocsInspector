@@ -28,10 +28,10 @@ public class MainActivity extends Activity  {
 
 
 
-    Button b1,b2;
+    Button b1;
     EditText ed1,ed2;
 
-    TextView tx1;
+    TextView tx1,tx2;
     int counter = 3;
 
     @Override
@@ -43,9 +43,11 @@ public class MainActivity extends Activity  {
         ed1=(EditText)findViewById(R.id.editText);
         ed2=(EditText)findViewById(R.id.editText2);
 
-        b2=(Button)findViewById(R.id.button2);
+
         tx1=(TextView)findViewById(R.id.textView3);
         tx1.setVisibility(View.GONE);
+        tx2=(TextView)findViewById(R.id.textView2);
+        tx2.setVisibility(View.GONE);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,9 +64,10 @@ public class MainActivity extends Activity  {
                     Toast.makeText(getApplicationContext(), "Неверные учетные данные",Toast.LENGTH_SHORT).show();
 
 
-
+                    tx2.setVisibility(View.VISIBLE);
+                    tx2.setTextColor(Color.RED);
                     tx1.setVisibility(View.VISIBLE);
-                    tx1.setBackgroundColor(Color.RED);
+                    tx1.setTextColor(Color.RED);
                     counter--;
                     tx1.setText(Integer.toString(counter));
 
@@ -75,12 +78,7 @@ public class MainActivity extends Activity  {
             }
         });
 
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+
     }
 
 
