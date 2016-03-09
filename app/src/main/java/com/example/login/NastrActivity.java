@@ -22,7 +22,7 @@ public class NastrActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(NastrActivity.this, NastrYvedActivity.class);
+                Intent intent = new Intent(NastrActivity.this, SettingYvActivity.class);
                 startActivity(intent);
             }
 
