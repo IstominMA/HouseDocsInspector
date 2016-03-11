@@ -9,4 +9,40 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.login.MenLo1Activity">
 
+    <Button
+        android:id="@+id/btBigPictureNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendBigPictureStyleNotification"
+        android:text="Уведомление с большой картинкой"
+         />
+
+    <Button
+        android:id="@+id/btBasicNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendActionNotification"
+        android:text="Уведомление с кнопками"
+        android:layout_below="@+id/btInboxStyleNotification"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btBigTextNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendBigTextStyleNotification"
+        android:text="Уведомление с длинным текстом"
+        android:layout_below="@+id/btBasicNotification"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btInboxStyleNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendInboxStyleNotification"
+        android:text="Уведомление в стиле Inbox"
+        android:layout_below="@+id/btBigPictureNotification"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
+
