@@ -56,7 +56,7 @@ public class MainActivity extends Activity  {
                 if(ed1.getText().toString().equals("admin") &&
 
                         ed2.getText()   .toString().equals("admin")) {
-                    Toast.makeText(getApplicationContext(), "Перенаправляем",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Выполняем вход",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                     startActivity(intent);
                 }

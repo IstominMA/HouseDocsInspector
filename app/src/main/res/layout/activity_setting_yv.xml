@@ -14,8 +14,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Включить уведомления"
-        android:id="@+id/switch2"
+        android:id="@+id/switchnot"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Включить вибрацию уведомления"
+        android:id="@+id/switchvibrate"
+        android:layout_below="@+id/switchnot"
+        android:layout_alignParentStart ="true"
+        android:layout_marginTop="44dp"
+        android:layout_alignParentEnd="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Включить звук уведомления"
+        android:id="@+id/switchsound"
+        android:layout_below="@+id/switchvibrate"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="44dp"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>

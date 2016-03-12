@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -54,15 +55,21 @@ public class MenLo1Activity extends ActionBarActivity {
 
         Notification.Builder builder = new Notification.Builder(this)
                 .setTicker("Пришёл приказ!")
-                .setContentTitle("Уведомление с большим текстом")
+                .setContentTitle("Уведомление о новом приказе")
                 .setContentText(
                         "Для вас пришёл новый приказ")
                 .setSmallIcon(R.drawable.ic_menu_send)
-                .addAction(R.drawable.ic_menu_send, "Запустить активность",
+                .addAction(R.drawable.ic_send_24dp, "Запустить активность",
                         pIntent).setAutoCancel(true);
 
         Notification notification = new Notification.BigTextStyle(builder)
                 .bigText(bigText).build();
+        notification.defaults = Notification.DEFAULT_SOUND |
+                Notification.DEFAULT_VIBRATE;
+        notification.ledARGB = Color.BLUE;
+        notification.ledOffMS = 0;
+        notification.ledOnMS = 1;
+        notification.flags = notification.flags | Notification.FLAG_SHOW_LIGHTS;
 
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.notify(1, notification);
