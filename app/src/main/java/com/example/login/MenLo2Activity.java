@@ -1,20 +1,24 @@
 package com.example.login;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
+import android.app.Activity;
 import android.content.res.Resources;
-import android.graphics.BitmapFactory;
-import android.support.v7.app.ActionBarActivity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ScrollView;
+
+public class MenLo2Activity extends Activity {
 
 
-public class MenLo2Activity extends AppCompatActivity {
+
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_men_lo2);
+
+
 
     }
+}

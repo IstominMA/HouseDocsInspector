@@ -50,8 +50,8 @@ public class SettingYvActivity extends AppCompatActivity {
                 editor.putBoolean(NOTIFICATION_ENABLED, isChecked);
                 editor.apply();
                 if (isChecked) {
-                    soundSwitch.setEnabled(settings.getBoolean(NOTIFICATION_SOUND_ENABLED, true));
-                    vibrateSwitch.setEnabled(settings.getBoolean(NOTIFICATION_VIBRATE_ENABLED, true));
+                    soundSwitch.setEnabled(true);
+                    vibrateSwitch.setEnabled(true);
                 } else {
                     soundSwitch.setEnabled(false);
                     vibrateSwitch.setEnabled(false);
