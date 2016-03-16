@@ -16,24 +16,6 @@
         android:text="Информация о программе"
         android:id="@+id/textView4"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:text="Программа разработана для того, чтобы показать основные элементы приложения для ГЖИ"
-        android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/backgr"
-        android:layout_marginTop="51dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText4"
-        android:text="Версия программы 0.4"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

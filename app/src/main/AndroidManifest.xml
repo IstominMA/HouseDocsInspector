@@ -26,7 +26,7 @@
         <activity android:name=".Info2Activity" />
         <activity android:name=".SettingYvActivity" />
         <activity android:name=".MenLo1Activity" />
-        <activity android:name=".MenLo2Activity" />
+        <activity android:name=".MenLo2Activity"></activity>
     </application>
 
 </manifest>

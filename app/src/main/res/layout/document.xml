@@ -1,40 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/document_border"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp">
-
-
-    <TextView
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <ListView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        android:id="@+id/nameTextView"
-        android:layout_gravity="left" />
+        android:id="@+id/listView1"
+        android:layout_gravity="center_horizontal" >
+    </ListView>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ListView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:textColor="#000000"
-        android:textSize="15dp"
-        android:textStyle="italic"
-        android:id="@+id/dateTextView"
-        android:layout_gravity="left" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:id="@+id/infoTextView"
-        android:layout_gravity="left" />
+        android:id="@+id/listView2"
+        android:layout_gravity="center_horizontal" >
+    </ListView>
 
 </LinearLayout>
