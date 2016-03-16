@@ -70,13 +70,14 @@ public class SecondActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera)   {
+            Intent intent = new Intent(SecondActivity.this, MenLo2Activity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_share) {
             Intent intent = new Intent(SecondActivity.this, MenLo1Activity.class);
             startActivity(intent);
         } else if (id == R.id.nav_send) {
-            Intent intent = new Intent(SecondActivity.this, MenLo2Activity.class);
-            startActivity(intent);
+
 
         } else if (id == R.id.nav_manage) {
             Intent intent = new Intent(SecondActivity.this, NastrActivity.class);

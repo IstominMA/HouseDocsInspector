@@ -57,7 +57,7 @@ public class MenLo1Activity extends ActionBarActivity {
                     .setContentText(
                             "Для вас пришёл новый приказ")
                     .setSmallIcon(R.drawable.ic_menu_send)
-                    .addAction(R.drawable.ic_send_24dp, "Запустить активность",
+                    .addAction(R.drawable.ic_send_24dp, "Перейти в приложение",
                             pIntent).setAutoCancel(true);
 
             Notification notification = new Notification.BigTextStyle(builder)
