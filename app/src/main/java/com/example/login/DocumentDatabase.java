@@ -14,7 +14,7 @@ public class DocumentDatabase {
         Document doc2 = new Document("doc2", new Date(), "info");
         array.add(doc2);
 
-        
+
         return array;
     }
 

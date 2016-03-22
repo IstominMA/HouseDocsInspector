@@ -13,23 +13,14 @@
     tools:showIn="@layout/app_bar_second"
     tools:context="com.example.login.SecondActivity">
 
-    <SearchView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/searchView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
-
     <ScrollView
         android:id="@+id/myview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:background="#E0E0E0"
-        android:layout_below="@+id/searchView"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="102dp">
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -48,7 +39,7 @@
 
             <Button
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="90dp"
                 android:text="1" />
 
             <Button

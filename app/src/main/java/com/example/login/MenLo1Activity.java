@@ -57,8 +57,8 @@ public class MenLo1Activity extends ActionBarActivity {
                     .setContentText(
                             "Для вас пришёл новый приказ")
                     .setSmallIcon(R.drawable.ic_menu_send)
-                    .addAction(R.drawable.ic_send_24dp, "Запустить активность",
-                            pIntent).setAutoCancel(true);
+                    .addAction(R.drawable.ic_send_24dp, "Перейти в приложение",
+                            pIntent).setAutoCancel(false);
 
             Notification notification = new Notification.BigTextStyle(builder)
                     .bigText(bigText).build();
@@ -67,7 +67,7 @@ public class MenLo1Activity extends ActionBarActivity {
             notification.ledOffMS = 0;
             notification.ledOnMS = 1;
             notification.flags = notification.flags | Notification.FLAG_SHOW_LIGHTS;
-
+            notification.flags |= Notification.FLAG_AUTO_CANCEL;
             NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
             notificationManager.notify(1, notification);
         } else {

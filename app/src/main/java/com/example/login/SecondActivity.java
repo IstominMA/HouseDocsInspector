@@ -13,8 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class SecondActivity extends AppCompatActivity
+
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -28,7 +32,7 @@ public class SecondActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -70,13 +74,14 @@ public class SecondActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera)   {
+            Intent intent = new Intent(SecondActivity.this, MenLo2Activity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_share) {
             Intent intent = new Intent(SecondActivity.this, MenLo1Activity.class);
             startActivity(intent);
         } else if (id == R.id.nav_send) {
-            Intent intent = new Intent(SecondActivity.this, MenLo2Activity.class);
-            startActivity(intent);
+
 
         } else if (id == R.id.nav_manage) {
             Intent intent = new Intent(SecondActivity.this, NastrActivity.class);
