@@ -17,9 +17,9 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class SecondActivity extends AppCompatActivity
+public class SecondActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-        implements NavigationView.OnNavigationItemSelectedListener {
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +27,6 @@ public class SecondActivity extends AppCompatActivity
         setContentView(R.layout.activity_second);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -38,6 +36,14 @@ public class SecondActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        listView = (ListView)findViewById(R.id.listView);
+        ArrayList<Document> array = DocumentDatabase.fetch();
+        DocumentAdapter adapter = new DocumentAdapter(this, array);
+        listView.setAdapter(adapter);
+
+
+
     }
 
     @Override
@@ -81,6 +87,8 @@ public class SecondActivity extends AppCompatActivity
             Intent intent = new Intent(SecondActivity.this, MenLo1Activity.class);
             startActivity(intent);
         } else if (id == R.id.nav_send) {
+            Intent intent = new Intent(SecondActivity.this, CreateDocumentActivity.class);
+            startActivity(intent);
 
 
         } else if (id == R.id.nav_manage) {

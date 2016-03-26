@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorNewDocument">#51D94A</color>
+    <color name="colorExpiredDocument">#FF2E2E</color>
+    <color name="colorPreExpiredDocument">#FFEA2E</color>
+    <color name="colorDocument">#9C9C9C</color>
+</resources>
