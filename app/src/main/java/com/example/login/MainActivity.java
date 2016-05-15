@@ -30,7 +30,6 @@ public class MainActivity extends Activity  {
 
     Button b1;
     EditText ed1,ed2;
-
     TextView tx1,tx2;
     int counter = 3;
 
@@ -77,8 +76,6 @@ public class MainActivity extends Activity  {
                 }
             }
         });
-
-
     }
 
 

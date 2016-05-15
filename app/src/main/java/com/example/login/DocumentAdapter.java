@@ -2,10 +2,13 @@ package com.example.login;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.view.LayoutInflater;
 import android.widget.TextView;
@@ -19,7 +22,7 @@ public class DocumentAdapter extends BaseAdapter {
 
     private  LayoutInflater layoutInflater;
     private  ArrayList<Document> array;
-
+    public final String DOCUMENT_EXTRA = "DocumentExtra";
     private DocumentAdapter (){};
 
     public DocumentAdapter(Context context, ArrayList<Document> array){
@@ -49,7 +52,7 @@ public class DocumentAdapter extends BaseAdapter {
             view = layoutInflater.inflate(R.layout.document, parent, false);
         }
 
-        Document document = array.get(position);
+        final Document document = array.get(position);
 
         TextView nameTextView = (TextView)view.findViewById(R.id.nameTextView);
         TextView dateTextView = (TextView)view.findViewById(R.id.dateTextView);
@@ -60,11 +63,14 @@ public class DocumentAdapter extends BaseAdapter {
         nameTextView.setText(document.getName());
         infoTextView.setText(document.getInfo());
         dateTextView.setText(document.getCreationDate().toString());
-        borderView.setBackgroundColor(R.color.colorNewDocument);
+        borderView.setBackgroundColor(getColorForDate(document.getCreationDate()));
+
 
 
         return view;
     }
+
+
 
     private int getColorForDate(Date date){
         Calendar calendar = new GregorianCalendar();
@@ -73,20 +79,28 @@ public class DocumentAdapter extends BaseAdapter {
         calendar.add(Calendar.DAY_OF_MONTH, -10);
         comparableDate = calendar.getTime();
         if (date.after(comparableDate)){
-            return R.color.colorNewDocument;
+            return Colors.NEW_DOCUMENT;
         }
 
         calendar.add(Calendar.DAY_OF_MONTH, -10);
         comparableDate = calendar.getTime();
         if (date.after(comparableDate)){
-            return R.color.colorPreExpiredDocument;
+            return Colors.PRE_EXPIRED_DOCUMENT;
         }
 
         if (date.before(comparableDate)){
-            return R.color.colorExpiredDocument;
+            return Colors.EXPIRED_DOCUMENT;
         }
 
-        return R.color.colorNewDocument;
+        return Colors.DOCUMENT;
     }
 
+    public class Colors {
+
+        public final static int NEW_DOCUMENT = 0xFF51D94A;
+        public final static int EXPIRED_DOCUMENT = 0xFFFF2E2E;
+        public final static int PRE_EXPIRED_DOCUMENT = 0xFFFFEA2E;
+        public final static int DOCUMENT = 0xFF9C9C9C;
+
+    }
 }

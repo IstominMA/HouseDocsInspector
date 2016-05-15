@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Список документов" />
+
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/ic_menu_manage"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1dp"
+                android:title="Настройки" />
+
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1dp"
+                android:title="Запуск уведомления" />
+
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_word"
+                android:icon="@drawable/ic_menu_gallery"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1dp"
+                android:title="Блокнот" />
+
+        </menu>
+    </item>
+
+</menu>

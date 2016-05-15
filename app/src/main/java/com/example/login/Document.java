@@ -1,9 +1,10 @@
 package com.example.login;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Document {
+public class Document implements Serializable {
 
     private String name;
     private Date creationDate;

@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 
 public class MenLo1Activity extends ActionBarActivity {
-    // Идентификатор уведомления
     private static final int NOTIFY_ID = 101;
     public static final String NOTIFICATION_SETTING = "notificationSetting";
     public static final String NOTIFICATION_ENABLED = "notificationEnabled";
@@ -53,12 +52,13 @@ public class MenLo1Activity extends ActionBarActivity {
 
             Notification.Builder builder = new Notification.Builder(this)
                     .setTicker("Пришёл приказ!")
+                    .setAutoCancel(true)
                     .setContentTitle("Уведомление о новом приказе")
-                    .setContentText(
-                            "Для вас пришёл новый приказ")
+                    .setContentText("Для вас пришёл новый приказ")
+                    .setWhen(System.currentTimeMillis())
                     .setSmallIcon(R.drawable.ic_menu_send)
                     .addAction(R.drawable.ic_send_24dp, "Перейти в приложение",
-                            pIntent).setAutoCancel(false);
+                            pIntent);
 
             Notification notification = new Notification.BigTextStyle(builder)
                     .bigText(bigText).build();
@@ -66,8 +66,8 @@ public class MenLo1Activity extends ActionBarActivity {
             notification.ledARGB = Color.BLUE;
             notification.ledOffMS = 0;
             notification.ledOnMS = 1;
-            notification.flags = notification.flags | Notification.FLAG_SHOW_LIGHTS;
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
+
             NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
             notificationManager.notify(1, notification);
         } else {

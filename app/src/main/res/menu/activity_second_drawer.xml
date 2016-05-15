@@ -10,20 +10,19 @@
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
+            android:divider="@android:color/transparent"
             android:title="Настройки" />
-    </group>
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:divider="@android:color/transparent"
+            android:title="Запуск уведомления" />
+        <item
+            android:id="@+id/nav_word"
+            android:icon="@drawable/ic_menu_gallery"
+            android:divider="@android:color/transparent"
+            android:title="Блокнот" />
 
-    <item android:title="Меню ложных вызовов">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Запуск уведомления" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Запуск документа" />
-        </menu>
-    </item>
+    </group>
 
 </menu>

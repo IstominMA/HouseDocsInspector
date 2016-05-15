@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_lach"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
@@ -27,7 +27,8 @@
         <activity android:name=".SettingYvActivity" />
         <activity android:name=".MenLo1Activity" />
         <activity android:name=".MenLo2Activity" />
-        <activity android:name=".CreateDocumentActivity"></activity>
+        <activity android:name=".WordEdit" />
+        <activity android:name=".DocumentActivity"></activity>
     </application>
 
 </manifest>

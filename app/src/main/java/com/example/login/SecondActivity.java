@@ -13,13 +13,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class SecondActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    ArrayList<Document> array;
     ListView listView;
+
+    public final String DOCUMENT_EXTRA = "DocumentExtra";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +44,28 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
         navigationView.setNavigationItemSelectedListener(this);
 
         listView = (ListView)findViewById(R.id.listView);
-        ArrayList<Document> array = DocumentDatabase.fetch();
-        DocumentAdapter adapter = new DocumentAdapter(this, array);
+        array = DocumentDatabase.fetch();
+        final DocumentAdapter adapter = new DocumentAdapter(this, array);
         listView.setAdapter(adapter);
 
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(SecondActivity.this, DocumentActivity.class);
+                Document document = (Document)adapter.getItem(position);
+                intent.putExtra(DOCUMENT_EXTRA, document);
+                startActivity(intent);
+            }
+        });
 
     }
+
+
+
+
+
+
+
 
     @Override
     public void onBackPressed() {
@@ -55,6 +76,7 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
             super.onBackPressed();
         }
     }
+
 
 
 
@@ -79,24 +101,22 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera)   {
-            Intent intent = new Intent(SecondActivity.this, MenLo2Activity.class);
+        if  (id == R.id.nav_manage) {
+            Intent intent = new Intent(SecondActivity.this, NastrActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_share) {
             Intent intent = new Intent(SecondActivity.this, MenLo1Activity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_send) {
-            Intent intent = new Intent(SecondActivity.this, CreateDocumentActivity.class);
+        } else if (id == R.id.nav_camera) {
+            Intent intent = new Intent(SecondActivity.this, MenLo2Activity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_word) {
+            Intent intent = new Intent(SecondActivity.this, WordEdit.class);
             startActivity(intent);
 
-
-        } else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(SecondActivity.this, NastrActivity.class);
-            startActivity(intent);
 
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
